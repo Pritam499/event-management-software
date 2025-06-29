@@ -30,6 +30,6 @@ export const login = async ({ email, password }) => {
   if (!user || !bcrypt.compareSync(password, user.password)) {
     throw new Error('Invalid credentials');
   }
-  const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '24h' });
+  const token = jwt.sign({ id: user.id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '24h' });
   return { user, token };
 };
