@@ -2,50 +2,6 @@ import { Event, User, EventAttendee } from "../models/index.js";
 import { sendEmail } from "./emailService.js";
 import { Op } from "sequelize";
 
-// export const createEvent = async (creatorId, data) => {
-//   const { title, date, time, place, agenda, reason, attendeeIds } = data;
-
-//   // Validate time format (accepts both HH:mm and HH:mm:ss)
-//   const isValidTime = (t) => /^([01]\d|2[0-3]):([0-5]\d)(:[0-5]\d)?$/.test(t);
-  
-//   if (time && !isValidTime(time)) {
-//     throw new Error("Invalid time format. Expected HH:mm or HH:mm:ss");
-//   }
-
-//   // Normalize to HH:mm:ss format
-//   const normalizedTime = time 
-//     ? (time.length === 5 ? `${time}:00` : time)
-//     : null;
-
-//   const event = await Event.create({
-//     title,
-//     date,
-//     time: normalizedTime,
-//     place,
-//     agenda,
-//     reason,
-//     createdBy: creatorId,
-//   });
-
-//   await event.setAttendees(attendeeIds);
-
-//   const cmo = await User.findOne({ where: { role: "cmo" } });
-//   if (cmo) {
-//     sendEmail(
-//       cmo.email,
-//       "New Event Pending",
-//       `Event "${title}" needs your approval.`
-//     );
-//   }
-
-//   return await Event.findByPk(event.id, {
-//     include: [
-//       { association: "creator", attributes: { exclude: ["password"] } },
-//       { association: "attendees", attributes: { exclude: ["password"] } },
-//     ],
-//   });
-// };
-
 export const createEvent = async (creatorId, data) => {
   const { title, date, time, place, agenda, reason, attendeeIds } = data;
 
