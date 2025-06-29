@@ -24,6 +24,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/authRoutes.js';
 import eventRoutes from './routes/eventRoutes.js';
 import feedbackRoutes from './routes/feedbackRoutes.js';
+import userRoutes from './routes/userRoutes.js';
 import './scheduler.js';
 
 dotenv.config();
@@ -42,6 +43,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use('/auth', authRoutes);
+app.use('/users', userRoutes);
 app.use('/events', eventRoutes);
 app.use('/feedback', feedbackRoutes);
 
