@@ -52,6 +52,8 @@ Feedback Collection Post Event
 
 Scheduled Jobs for Feedback Reminders
 
+Role-based dashboards and permissions
+
 ### 📌 Assumptions
 Email notifications use a placeholder/mock service for development.
 
@@ -60,7 +62,6 @@ Admin roles (CMO/CEO) are predefined.
 Scheduler for feedback uses node-cron running daily.
 
 ### 🧩 Pending / Future Improvements
-Role-based dashboards and permissions
 
 Audit logs for approval history
 
