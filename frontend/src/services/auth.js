@@ -18,7 +18,11 @@ export function logout() {
 
 // Used on page‐refresh to repopulate from the JWT:
 export async function getCurrentUser() {
+  const token = localStorage.getItem('token');
+  if (!token) throw new Error('No token');
   // Fetch full user object (including role) from /auth/me
-  const { data } = await api.get('/auth/me');
+  const { data } = await api.get('/auth/me', {
+    headers: { Authorization: `Bearer ${token}` }
+  });
   return data;     // { id, name, email, role, … }
 }
