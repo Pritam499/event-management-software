@@ -12,10 +12,17 @@ dotenv.config();
 const app = express();
 
 // Enable CORS
+const allowedOrigins = [process.env.FRONTEND_URL];
+
 app.use(cors({
-  origin: [
-    process.env.FRONTEND_URL  // add your production URL here
-  ],
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      console.error(`Blocked by CORS: ${origin}`);
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true
 }));
 
