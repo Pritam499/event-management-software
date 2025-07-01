@@ -42,12 +42,13 @@ npm install             # Install dependencies
 npm run dev             # Start the development server
 
 ### 🎨 Frontend
+```bash
 cd frontend
 cp .env.example .env    # Add your backend API URL
 npm install             # Install dependencies
 npm start               # Start the React app
 
-## ✅ Features Implemented
+✅ Features Implemented
 🔐 User Authentication (Login, Signup)
 
 📋 Event Submission and Listing
