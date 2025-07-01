@@ -1,6 +1,13 @@
 # 🎉 Event Management System
 
-A full-stack event management system for organizational use, built with Node.js, Express, PostgreSQL, and React.
+A full-stack Event Management system for organizational use, built using **Node.js**, **Express**, **PostgreSQL**, and **React**.
+
+---
+
+## 🚀 Live Demo
+
+- **Frontend:** https://event-manager-ceo.netlify.app  
+- **Repository:** [GitHub - pritam499/event-management-software](https://github.com/pritam499/event-management-software)
 
 ---
 
@@ -11,64 +18,68 @@ A full-stack event management system for organizational use, built with Node.js,
 - **Database:** PostgreSQL  
 - **Deployment:**  
   - Backend: Railway  
-  - Frontend: Netlify  
-
----
-
-## 🚀 Live Demo & Repository
-
-- **Frontend Live:** https://event-manager-ceo.netlify.app  
-- **GitHub Repo:** https://github.com/pritam499/event-management-software  
+  - Frontend: Netlify
 
 ---
 
 ## 🛠️ Setup Instructions
 
-Open a terminal and run:
+### Backend Setup
 
-```bash
-# Clone the repo
-git clone https://github.com/pritam499/event-management-software.git
-cd event-management-software
+1. Open terminal and navigate to the backend folder:  
+   `cd backend`
 
-# Setup backend
-cd backend
-cp .env.example .env    # fill in your env vars
-npm install
-npm run dev             # runs at http://localhost:5000
+2. Copy the environment file:  
+   `cp .env.example .env`  
+   _Then fill in your environment variables._
 
-# In a new terminal, setup frontend
-cd ../frontend
-npm install
-npm run start           # runs at http://localhost:3000
-exit               # leaves the bash shell
-code README.md     # or vim README.md, nano README.md, etc.
+3. Install dependencies:  
+   `npm install`
+
+4. Start the backend server:  
+   `npm run dev`  
+   The backend will run on `http://localhost:5000`
+
+---
+
+### Frontend Setup
+
+1. Open a new terminal and navigate to the frontend folder:  
+   `cd frontend`
+
+2. Install frontend dependencies:  
+   `npm install`
+
+3. Start the frontend app:  
+   `npm run start`  
+   The frontend will run on `http://localhost:3000`
+
+---
 
 ## ✅ Features Implemented
-🔐 User Authentication (Login, Signup)
 
-📋 Event Submission & Listing
+- 🔐 **User Authentication** (Login, Signup)
+- 📋 **Event Submission & Listing**
+  - Create Event (Employee, CMO)
+  - Update Event (CMO → CEO)
+- ✅ **Approval Workflow**: Employee → CMO → CEO
+- 📧 **Email Notifications** on approval
+- 🗣️ **Feedback Collection** post-event
+- ⏰ **Scheduled Jobs** for feedback reminders using `node-cron`
+- 👥 **Role-Based Dashboards** and permission handling
 
-- Create Event (Employee, CMO)
-- Update Event (CMO → CEO)
-
-## ✅ Approval Workflow
-Employee → CMO → CEO
-
-📧 Email Notifications on approval
-
-🗣️ Feedback Collection post event
-
-⏰ Scheduled Jobs for feedback reminders (using node-cron)
-
-👥 Role-Based Dashboards & permissions
+---
 
 ## 📌 Assumptions
-- Email notifications use a placeholder/mock service in development
-- Admin roles (CMO/CEO) are predefined
-- Feedback reminders run daily via node-cron
+
+- Email notifications use a placeholder/mock service during development
+- Admin roles (CMO, CEO) are predefined in the system
+- Feedback reminders run daily via scheduled jobs (`node-cron`)
+
+---
 
 ## 🧩 Pending / Future Improvements
-- 📝 Add audit logs for approval history
-- 📎 Support file attachments for events
-- ✉️ Enhance email service with templates & HTML formatting
+
+- 📝 Add audit logs to track approval history
+- 📎 Allow file attachments with events
+- ✉️ Improve email service with rich templates and formatting
