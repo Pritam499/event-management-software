@@ -42,7 +42,7 @@ npm start
 ### ✅ Features Implemented
 User Authentication (Login, Signup)
 
-Event Submission and Listing
+Event Submission and Listing(Create Event - (Employee, CMO), Update Event - (CMO -> CEO))
 
 Approval Workflow (Employee → CMO → CEO)
 
