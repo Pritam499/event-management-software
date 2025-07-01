@@ -1,71 +1,81 @@
-### Description: 
-A full-stack Event Management system for organizational use, built using Node.js, Express, PostgreSQL, and React.
+# 🎉 Event Management System
 
-### 🔧 Tech Stack
-Frontend: React, Axios, React Router
+A full-stack Event Management system for organizational use, built using **Node.js**, **Express**, **PostgreSQL**, and **React**.
 
-Backend: Node.js, Express.js
+---
 
-Database: PostgreSQL
+## 🔧 Tech Stack
 
-Deployment:
+**Frontend**  
+- React  
+- Axios  
+- React Router
 
-Backend: Railway
+**Backend**  
+- Node.js  
+- Express.js
 
-Frontend: Netlify
+**Database**  
+- PostgreSQL
 
-### 🚀 Live Demo
-🌐 Frontend: https://event-manager-ceo.netlify.app
+**Deployment**  
+- 🚀 Backend: [Railway](https://railway.app)  
+- 🌐 Frontend: [Netlify](https://netlify.com)
 
-📦 Repository: GitHub - pritam499/event-management-software
+---
 
-🛠️ Setup Instructions
+## 🚀 Live Demo
+
+- 🌐 **Frontend**: [event-manager-ceo.netlify.app](https://event-manager-ceo.netlify.app)  
+- 📦 **Repository**: [GitHub - pritam499/event-management-software](https://github.com/pritam499/event-management-software)
+
+---
+
+## 🛠️ Setup Instructions
+
 ### 🔙 Backend
-Navigate to /backend
 
-Copy .env.example to .env and fill in environment variables.
+```bash
+cd backend
+cp .env.example .env    # Fill in the environment variables
+npm install             # Install dependencies
+npm run dev             # Start the development server
 
-Install dependencies:
-npm install
-Run locally:
-npm run dev
-🎨 Frontend
-Navigate to /frontend
+### 🎨 Frontend
+cd frontend
+cp .env.example .env    # Add your backend API URL
+npm install             # Install dependencies
+npm start               # Start the React app
 
-Copy .env.example to .env and add the backend API URL.
+## ✅ Features Implemented
+🔐 User Authentication (Login, Signup)
 
-Install dependencies:
-npm install
+📋 Event Submission and Listing
 
-Start the app:
-npm start
-### ✅ Features Implemented
-User Authentication (Login, Signup)
+Create Event (Employee, CMO)
 
-Event Submission and Listing(Create Event - (Employee, CMO), Update Event - (CMO -> CEO))
+Update Event (CMO → CEO)
 
-Approval Workflow (Employee → CMO → CEO)
+## ✅ Approval Workflow (Employee → CMO → CEO)
 
-Email Notifications on Approval
+📧 Email Notifications on Approval
 
-Feedback Collection Post Event
+🗣️ Feedback Collection Post Event
 
-Scheduled Jobs for Feedback Reminders
+⏰ Scheduled Jobs for Feedback Reminders
 
-Role-based dashboards and permissions
+👥 Role-Based Dashboards and Permissions
 
-### 📌 Assumptions
-Email notifications use a placeholder/mock service for development.
+## 📌 Assumptions
+Email notifications use a placeholder/mock service for development
 
-Admin roles (CMO/CEO) are predefined.
+Admin roles (CMO/CEO) are predefined in the system
 
-Scheduler for feedback uses node-cron running daily.
+Scheduler for feedback reminders uses node-cron running daily
 
-### 🧩 Pending / Future Improvements
+🧩 Pending / Future Improvements
+📝 Audit logs for approval history
 
-Audit logs for approval history
+📎 File attachments for events
 
-File attachments for events
-
-Enhanced email service with templates
-
+✉️ Enhanced email service with templates and formatting
