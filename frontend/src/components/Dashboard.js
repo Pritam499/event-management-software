@@ -59,10 +59,14 @@ export default function Dashboard({ user, onLogout }) {
       </header>
 
       <nav className="dashboard-nav">
-        <button
-          className={activeTab === 'create' ? 'active' : ''}
-          onClick={() => setActiveTab('create')}
-        >Create Event</button>
+{userRole !== 'ceo' && (
+  <button
+    className={activeTab === 'create' ? 'active' : ''}
+    onClick={() => setActiveTab('create')}
+  >
+    Create Event
+  </button>
+)}
 
         <button
           className={activeTab === 'events' ? 'active' : ''}
@@ -76,10 +80,12 @@ export default function Dashboard({ user, onLogout }) {
       </nav>
 
       <main className="dashboard-content">
+          {userRole !== 'ceo' && activeTab === 'create' && (
+  <section>
+    <EventForm onCreated={fetchEvents} />
+  </section>
+)}
 
-        {activeTab === 'create' && (
-          <section><EventForm onCreated={fetchEvents} /></section>
-        )}
 
         {activeTab === 'events' && (
           <section>
