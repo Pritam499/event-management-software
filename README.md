@@ -41,3 +41,34 @@ npm run dev             # runs at http://localhost:5000
 cd ../frontend
 npm install
 npm run start           # runs at http://localhost:3000
+exit               # leaves the bash shell
+code README.md     # or vim README.md, nano README.md, etc.
+
+## ✅ Features Implemented
+🔐 User Authentication (Login, Signup)
+
+📋 Event Submission & Listing
+
+- Create Event (Employee, CMO)
+- Update Event (CMO → CEO)
+
+## ✅ Approval Workflow
+Employee → CMO → CEO
+
+📧 Email Notifications on approval
+
+🗣️ Feedback Collection post event
+
+⏰ Scheduled Jobs for feedback reminders (using node-cron)
+
+👥 Role-Based Dashboards & permissions
+
+## 📌 Assumptions
+- Email notifications use a placeholder/mock service in development
+- Admin roles (CMO/CEO) are predefined
+- Feedback reminders run daily via node-cron
+
+## 🧩 Pending / Future Improvements
+- 📝 Add audit logs for approval history
+- 📎 Support file attachments for events
+- ✉️ Enhance email service with templates & HTML formatting
