@@ -26,7 +26,7 @@ A full-stack Event Management system for organizational use, built using **Node.
 
 ## 🚀 Live Demo
 
-- 🌐 **Frontend**: [event-manager-ceo.netlify.app](https://event-manager-ceo.netlify.app)  
+- 🌐 **Frontend**: [https://event-manager-ceo.netlify.app](https://event-manager-ceo.netlify.app)  
 - 📦 **Repository**: [GitHub - pritam499/event-management-software](https://github.com/pritam499/event-management-software)
 
 ---
@@ -40,15 +40,16 @@ cd backend
 cp .env.example .env    # Fill in the environment variables
 npm install             # Install dependencies
 npm run dev             # Start the development server
-
+---
 ### 🎨 Frontend
-```bash
+bash
+Copy
+Edit
 cd frontend
-cp .env.example .env    # Add your backend API URL
-npm install             # Install dependencies
-npm start               # Start the React app
 
-✅ Features Implemented
+---
+
+### ✅ Features Implemented
 🔐 User Authentication (Login, Signup)
 
 📋 Event Submission and Listing
@@ -57,7 +58,7 @@ Create Event (Employee, CMO)
 
 Update Event (CMO → CEO)
 
-## ✅ Approval Workflow (Employee → CMO → CEO)
+### ✅ Approval Workflow (Employee → CMO → CEO)
 
 📧 Email Notifications on Approval
 
@@ -67,7 +68,7 @@ Update Event (CMO → CEO)
 
 👥 Role-Based Dashboards and Permissions
 
-## 📌 Assumptions
+📌 Assumptions
 Email notifications use a placeholder/mock service for development
 
 Admin roles (CMO/CEO) are predefined in the system
